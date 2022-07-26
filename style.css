@@ -5,11 +5,11 @@
     font-family:'Roboto';
 }
 
-html { font-size: 300%; }
+/* html { font-size: 300%; } */
 
 #main-page{
-    width: 2550px;
-    height:3300px;
+    width: 100%;
+    /* height:3300px; */
     box-sizing:border-box;
     border:1px solid black;
     position:relative;
@@ -37,22 +37,26 @@ header{
     margin-bottom:0.5rem;
 }
 #google-logo-top{
-    width:400px;
+    width:15%;
+    min-width: 100px;
     box-sizing:border-box;
 }
 #search-bar{
-    width: 1200px;
-    height:130px;
+    width: 60%;
+    height:40px;
     border: 1px solid transparent;
     box-shadow: 0 8px 20px 4px rgb(64 60 67 / 16%);
     border-radius: 96px;
     background-color: white;
 }
-#google-logo-top, #search-bar{
+#google-logo-top{
+    margin-left:40px;
+}
+#search-bar{
     margin-left:1rem;
 }
 #search-bar h3{
-    margin:35px 80px;
+    margin:10px 25px;
     font-size: 1.2rem;
     color: rgba(0,0,0,.87);
 }
@@ -61,7 +65,7 @@ li{
 }
 #header-media-options li{
     padding: 0.5rem;
-    margin: 0 0.8rem;
+    margin-left: 15px;
 }
 #header-media-options .active{
     border-bottom:10px solid #1a73e8;
@@ -89,10 +93,11 @@ li{
 }
 #main-content{
     /* background-color: aqua; */
-    width: 1600px;
-    margin-left:125px;
+    width: 60%;
+    margin-left:75px;
     /* border-right: 5px solid black; */
     display: inline-block;
+    padding-bottom:150px;
 }
 
 h6{
@@ -100,8 +105,12 @@ h6{
     color: #70757a;
 }
 .search-result{
-    margin:1.3rem 0;
+    margin:2.5rem 0;
     /* border: 5px solid black; */
+}
+a{
+    text-decoration:none;
+    color:none;
 }
 .search-result-location{
     color: #202124;
@@ -179,7 +188,7 @@ h2{
     /* display: inline-block; */
     width:14rem;
     border-left: 3px solid #dadce0;
-    height:44rem;
+    height:48rem;
     color:#4d5156;
     font-size: 0.9rem;
 
@@ -232,17 +241,17 @@ h2{
 }
 #google-bottom-logo{
     position:absolute;
-    bottom:7rem;
+    bottom:125px;
     left:50%;
     transform: translateX(-50%);
-    width: 15rem;
+    width: 22rem;
 }
 
 footer{
-    position:absolute;
+    /* position:absolute;
     bottom:0;
     right: 0;
-    left:0;
+    left:0; */
     height:6rem;
     text-align: center;
     background-color: #f2f2f2;
@@ -250,7 +259,7 @@ footer{
 }
 h5{
     font-weight: bolder;
-    margin-top:1.5rem;
+    padding-top:1.5rem;
 }
 h5 span{
     color:#1558d6;
@@ -259,4 +268,32 @@ h5 span{
     display: inline-block;
     margin:1rem;
     font-size: .9rem;
+}
+
+@media only screen and (max-width: 768px){
+    #side-content{
+        display: none;
+    }
+    #main-content{
+        width:70%;
+    }
+    .additional-details-right{
+        display:none;
+    }
+}
+@media only screen and (max-width: 600px){
+    #right-header{
+        display:none;
+    }
+    #google-logo-top{
+        margin-left:0;
+    }
+    #header-media-options, #google-bottom-logo{
+        display:none;
+    }
+    #main-content{
+        padding-bottom:60px;
+        margin-left:30px;
+        width:85%;
+    }
 }
